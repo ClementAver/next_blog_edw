@@ -1,13 +1,13 @@
 import Head from "next/head";
 
-export default function Home() {
+export default function List() {
   return (
     <>
       <Head>
-        <title>Accueil – EdW Next Blog</title>
+        <title>Liste – EdW Next Blog</title>
         <meta
           name="description"
-          content="page d'accueil du blog"
+          content="page Liste"
         />
         <meta
           name="viewport"

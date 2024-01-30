@@ -1,13 +1,13 @@
-import Head from "next/head";
+import Head from "next/head"
 
-export default function Home() {
+export default function Blog() {
   return (
-    <>
+     <>
       <Head>
-        <title>Accueil – EdW Next Blog</title>
+        <title>Blog – EdW Next Blog</title>
         <meta
           name="description"
-          content="page d'accueil du blog"
+          content="page Blog"
         />
         <meta
           name="viewport"
@@ -28,5 +28,5 @@ export default function Home() {
         </section>
       </main>
     </>
-  );
+  )
 }

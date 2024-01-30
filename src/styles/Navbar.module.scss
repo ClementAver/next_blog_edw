@@ -1,0 +1,24 @@
+.nav {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  background-color: #1c6be1;
+
+  ul {
+    display: flex;
+    margin: 0 auto;
+    list-style-type: none;
+  }
+
+  li {
+    padding: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
