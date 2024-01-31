@@ -1,19 +1,19 @@
 import Head from "next/head";
 import Link from "next/link";
-import styles from "@/styles/Blog.module.scss";
+import styles from "@/styles/List.module.scss";
 
-export default function Blog({
-  posts,
+export default function List({
+  users,
 }: {
-  posts: { userId: number; id: number; title: string; body: string }[];
+  users: { id: number; username: string }[];
 }) {
   return (
     <>
       <Head>
-        <title>Blog – EdW Next Blog</title>
+        <title>Liste – EdW Next Blog</title>
         <meta
           name="description"
-          content="page Blog"
+          content="page Liste"
         />
         <meta
           name="viewport"
@@ -30,15 +30,13 @@ export default function Blog({
       </Head>
       <main>
         <section className={styles.intro}>
-          <h1>Bienvenue sur le blog</h1>
-          <p>Voici les articles</p>
+          <h1>La liste des utilisateurs</h1>
         </section>
         <section className={styles.cardWrapper}>
-          {posts.map((article, index) => (
+          {users.map((user, index) => (
             <article key={index}>
-              <h2>{article.title}</h2>
-              <p>{article.body.slice(0, 100)}</p>
-              <Link href={`blog/${article.id}`}>Lire cet article</Link>
+              <h2>{user.username}</h2>
+              <Link href={`/list/${user.id}`}>Contacter</Link>
             </article>
           ))}
         </section>
@@ -48,10 +46,10 @@ export default function Blog({
 }
 
 export async function getStaticProps() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const posts = await response.json();
+  const response = await fetch("https://jsonplaceholder.typicode.com/users");
+  const users = await response.json();
 
   return {
-    props: { posts },
+    props: { users },
   };
 }

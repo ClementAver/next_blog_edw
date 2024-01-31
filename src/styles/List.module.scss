@@ -1,0 +1,74 @@
+.intro {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+.cardWrapper {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  margin-top: 4rem;
+
+  article {
+    width: 100%;
+    border: 1px solid rgba(200, 200, 200, 0.6);
+    border-radius: 0.2rem;
+    padding: 1rem;
+    padding-top: 1.4rem;
+    box-shadow: 2px 2px 2px rgba(200, 200, 200, 0.2);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+      margin-right: auto;
+
+      + p {
+        font-weight: bold;
+        color: grey;
+        margin-bottom: 0.6rem;
+      }
+    }
+
+    a {
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    padding: 1rem;
+    border-top: 1px solid rgba(200, 200, 200, 0.6);
+    border-left: 1px solid rgba(200, 200, 200, 0.6);
+    border-right: 1px solid rgba(200, 200, 200, 0.6);
+  }
+
+  li:last-of-type {
+    border-bottom: 1px solid rgba(200, 200, 200, 0.6);
+  }
+}
+
+.userCard {
+  max-width: 600px;
+  > h2,
+  > p,
+  > ul {
+    width: 100%;
+  }
+}

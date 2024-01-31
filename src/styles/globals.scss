@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap");
 
 :root {
   font-size: 16px;
@@ -17,9 +17,11 @@ body {
   overflow-x: hidden;
 }
 
-main {
-  section {
-    max-width: 1120px;
-    margin: auto;
-  }
+.container,
+section {
+  max-width: 1120px;
+  margin: auto;
+  padding: 0 1rem 1rem;
+
+  
 }
