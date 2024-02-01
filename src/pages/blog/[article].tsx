@@ -20,7 +20,7 @@ export default function Article({
           content="width=device-width, initial-scale=1"
         />
         <meta
-          http-equiv="X-UA-Compatible"
+          httpEquiv="X-UA-Compatible"
           content="IE=edge"
         />
         <link
@@ -39,11 +39,12 @@ export default function Article({
 }
 
 export async function getStaticProps(context: { params: { article: string } }) {
-  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const posts = await response.json();
-
   const id = context.params.article;
-  const post = posts.find((el: { id: number }) => el.id === parseInt(id));
+  const response = await fetch(
+    `https://jsonplaceholder.typicode.com/posts/${id}`
+  );
+  const post = await response.json();
+
   return {
     props: { post },
   };
@@ -54,7 +55,9 @@ export async function getStaticPaths() {
   const posts = await response.json();
 
   return {
-    paths: [{ params: { article: "1" } }],
-    fallback: true,
+    paths: posts.map((post: { id: number }) => ({
+      params: { article: post.id.toString() },
+    })),
+    fallback: false,
   };
 }

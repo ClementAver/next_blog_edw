@@ -26,7 +26,7 @@ export default function User({
           content="width=device-width, initial-scale=1"
         />
         <meta
-          http-equiv="X-UA-Compatible"
+          httpEquiv="X-UA-Compatible"
           content="IE=edge"
         />
         <link
@@ -52,11 +52,12 @@ export default function User({
 }
 
 export async function getStaticProps(context: { params: { user: string } }) {
-  const response = await fetch("https://jsonplaceholder.typicode.com/users");
-  const users = await response.json();
-
   const id = context.params.user;
-  const user = users.find((el: { id: number }) => el.id === parseInt(id));
+  const response = await fetch(
+    `https://jsonplaceholder.typicode.com/users/${id}`
+  );
+  const user = await response.json();
+
   return {
     props: { user },
   };
@@ -67,7 +68,9 @@ export async function getStaticPaths() {
   const users = await response.json();
 
   return {
-    paths: [{ params: { user: "1" } }],
-    fallback: true,
+    paths: users.map((user: { id: number }) => ({
+      params: { user: user.id.toString() },
+    })),
+    fallback: false,
   };
 }

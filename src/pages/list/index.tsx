@@ -20,7 +20,7 @@ export default function List({
           content="width=device-width, initial-scale=1"
         />
         <meta
-          http-equiv="X-UA-Compatible"
+          httpEquiv="X-UA-Compatible"
           content="IE=edge"
         />
         <link
