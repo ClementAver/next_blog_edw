@@ -18,10 +18,24 @@
   gap: 1rem;
 
   article {
-    border: 1px solid rgba(200, 200, 200, 0.6);
-    border-radius: 0.2rem;
+    position: relative;
+    border-radius: 0.4rem;
     padding: 1rem;
     box-shadow: 2px 2px 2px rgba(200, 200, 200, 0.2);
+    background: linear-gradient(to bottom right, #104087, #0c2d60);
+    overflow: hidden;
+    color: white;
+
+    &::after {
+      content: "📰";
+      // filter: drop-shadow(2px 2px 6px rgba(255, 255, 255, 0.6));
+      position: absolute;
+      opacity: 0.5;
+      bottom: -1.2rem;
+      right: -1.2rem;
+      font-size: 5rem;
+      transform: rotate(25deg) scale(1.2);
+    }
 
     h2 {
       font-size: 1.2rem;
@@ -33,6 +47,13 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+      }
+    }
+
+    a {
+      color: #88b5f8;
+      &:visited {
+        color: rgb(204, 167, 253);
       }
     }
   }

@@ -20,8 +20,7 @@
 
   article {
     width: 100%;
-    border: 1px solid rgba(200, 200, 200, 0.6);
-    border-radius: 0.2rem;
+    border-radius: 0.4rem;
     padding: 1rem;
     padding-top: 1.4rem;
     box-shadow: 2px 2px 2px rgba(200, 200, 200, 0.2);
@@ -29,22 +28,23 @@
     flex-flow: row wrap;
     align-items: center;
     margin: 0 auto;
+    background: linear-gradient(to bottom right, #104087, #0c2d60);
+    overflow: hidden;
+    color: white;
 
     h2 {
       font-size: 1.2rem;
       font-weight: 500;
       margin-bottom: 0.4rem;
       margin-right: auto;
-
-      + p {
-        font-weight: bold;
-        color: grey;
-        margin-bottom: 0.6rem;
-      }
     }
 
     a {
       margin-bottom: 0.4rem;
+      color: #88b5f8;
+      &:visited {
+        color: rgb(204, 167, 253);
+      }
     }
   }
 
@@ -54,13 +54,11 @@
 
   li {
     padding: 1rem;
-    border-top: 1px solid rgba(200, 200, 200, 0.6);
-    border-left: 1px solid rgba(200, 200, 200, 0.6);
-    border-right: 1px solid rgba(200, 200, 200, 0.6);
+    border-bottom: 1px solid rgba(200, 200, 200, 0.6);
   }
 
   li:last-of-type {
-    border-bottom: 1px solid rgba(200, 200, 200, 0.6);
+    border-bottom: 0px;
   }
 }
 
@@ -70,5 +68,10 @@
   > p,
   > ul {
     width: 100%;
+  }
+
+  p {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
   }
 }

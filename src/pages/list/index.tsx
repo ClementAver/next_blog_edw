@@ -35,7 +35,7 @@ export default function List({
         <section className={styles.cardWrapper}>
           {users.map((user, index) => (
             <article key={index}>
-              <h2>{user.username}</h2>
+              <h2>🧑‍💻 {user.username}</h2>
               <Link href={`/list/${user.id}`}>Contacter</Link>
             </article>
           ))}

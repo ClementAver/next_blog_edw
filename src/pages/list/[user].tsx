@@ -37,9 +37,9 @@ export default function User({
       <main>
         <section className={styles.cardWrapper}>
           <article className={styles.userCard}>
-            <h2>{user.name}</h2>
-            <p>Username : {user.username}</p>
+            <h2>🧑‍💻 {user.name}</h2>
             <ul>
+              <li>Username : {user.username}</li>
               <li>{user.email}</li>
               <li>{user.website}</li>
               <li>{user.phone}</li>

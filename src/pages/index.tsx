@@ -24,30 +24,34 @@ export default function Home() {
           href="/favicon.ico"
         />
       </Head>
+      <main className={styles.main}>
+        <div>
+          <section>
+            <div className={`container ${styles.intro}`}>
+              <h1>Bienvenue sur Code.io</h1>
+              <p>
+                Le blog communautaire des afficionados de développement web.
+              </p>
+            </div>
+          </section>
 
-      <section className={`container ${styles.intro}`}>
-        <h1>Bienvenue sur Code.io</h1>
-        <p>Le blog communautaire des afficionados de développement web.</p>
-      </section>
+          <section className={styles.cardWrapper}>
+            <article>
+              <h2>📰 Les articles</h2>
+              <p>Maximisez votre culture web</p>
+              <p>Exposés, trucs & astuces, témoignages.</p>
+              <Link href="/blog">Visite le blog</Link>
+            </article>
 
-      <section className={styles.cardWrapper}>
-        <article >
-          <h2>Lisez les articles</h2>
-          <p>Maximisez votre culture web</p>
-          <p>
-            Chaque auteur tente de vous apporter le plus de valeur possible par
-            article.
-          </p>
-          <Link href="/blog">Visite le blog</Link>
-        </article>
-
-        <article className={styles.card}>
-          <h2>Faites un tour vers la liste des membres</h2>
-          <p>Faites-vous des amis</p>
-          <p>Ajoutez, inviter et discuter avec les différents membres.</p>
-          <Link href="/list">Découvrez la liste des membres</Link>
-        </article>
-      </section>
+            <article className={styles.card}>
+              <h2>🧑‍💻 Les membres</h2>
+              <p>Faites-vous des amis</p>
+              <p>Ajoutez, inviter et discuter avec les différents membres.</p>
+              <Link href="/list">Découvrez la liste des membres</Link>
+            </article>
+          </section>
+        </div>
+      </main>
     </>
   );
 }
